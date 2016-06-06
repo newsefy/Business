@@ -19,6 +19,7 @@ for lines in fin:
 	words=line.split()
 	for word in words:
 		query_dic[word]=query_dic.get(word,0)+1
+print query_dic
 fin.close()
 
 # i have a query dict ready
@@ -26,7 +27,8 @@ fin.close()
 def simple_vector_space_model_bit_reprensentation():
 
 	for k in class_dic:
-		while i<class_dic[k]:
+		i=0
+		while i<=class_dic[k]:
 			doc_dic=dict()
 			a=str(i)
 			if len(a)==1:
@@ -39,10 +41,13 @@ def simple_vector_space_model_bit_reprensentation():
 			s="C:\\Users\\Sagar Gupta\\Desktop\\Business\\Bags_of_words Rep\\"
 			rel=s+k
 			ab=os.path.join(rel,x)
+			fout_query=open("query.txt","w")
 			fin_doc=open(ab,"r")
-			i=0
+			print "opened",x
+			j=0
+			sum=0
 			for line in fin_doc:
-				if i<2:
+				if j<2:
 					continue
 				else:
 					line=line.strip()
@@ -50,7 +55,11 @@ def simple_vector_space_model_bit_reprensentation():
 					if words[0] in query_dic:
 						sum=sum+1
 			
+
+			s=str(sum)+k+x
+			print s
 			fout.write(s)
+
 
 
 
