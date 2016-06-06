@@ -59,22 +59,5 @@ def simple_vector_space_model_bit_reprensentation():
 			s=str(sum)+k+x
 			print s
 			fout.write(s)
-
-
-
-
-
-
-
-			
-
-
-
-
-
-
-
-
-
-
-def second_model():
+			fout.close()
+			fin_doc.close()
