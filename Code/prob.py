@@ -22,7 +22,7 @@ for line in fin:
 print query_dic
 fin.close()
 # i have a query dict ready
-
+query_dic_final=dict()
 def simple_vector_space_model_bit_reprensentation():
 	fout_query=open("query.txt","w")
 
@@ -60,8 +60,17 @@ def simple_vector_space_model_bit_reprensentation():
 
 
 			s=str(sum)+" "+k+" "+x+"\n"
+			query_dic_final[s]=sum
 			print s
-			fout_query.write(s)
+			temp=dict()
+			temp=[(v, k) for k, v in doc_dic.items()]
+			temp.sort()
+			temp.reverse()
+			temp=[(k, v) for v, k in temp]
+			for k,v in temp:
+				string =k+"\n"
+				fout_doc.write(string)
+				#fout_query.write(s)
 			
 			fin_doc.close()
 			i=i+1
