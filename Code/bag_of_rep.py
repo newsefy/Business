@@ -4,7 +4,7 @@ class_dic=dict()
 i=1
 y=raw_input("file to write to")
 fout =open(y,"w")
-while i<417:
+while i<402:
 	doc_dic=dict()
 	a=str(i)
 	if len(a)==1:
@@ -15,8 +15,8 @@ while i<417:
 	else:
 		x=str(i)+".txt"
 
-	rel="C:\\Users\\Sagar Gupta\\Desktop\\Business\\Training set\\politics"
-	rel_ans="C:\\Users\\Sagar Gupta\\Desktop\\Business\\Bags_of_words Rep\\politics"
+	rel="C:\\Users\\Sagar Gupta\\Desktop\\Business\\Training set\\tech"
+	rel_ans="C:\\Users\\Sagar Gupta\\Desktop\\Business\\Bags_of_words Rep\\tech"
 	ab=os.path.join(rel,x)
 	ab_doc=os.path.join(rel_ans,x)
 	fin=open(ab,"r")
