@@ -1,3 +1,3 @@
-# Business
+# Different-news-articles-classified
 
-#the idea is to classify different news article
+##the idea is to classify different news article
