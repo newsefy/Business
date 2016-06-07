@@ -17,8 +17,10 @@ def class_dict():
 	class_dic["entertainment"]=385
 	return class_dic
 
-
-total_no_of_doc=class_dic["business"]+class_dic["sport"]+class_dic["politics"]+class_dic["tech"]+class_dic["entertainment"]
+def total_no_of_doc(**ka):
+	for i in ka:
+		total_no_of_doc=total_no_of_doc+int(ka[i])
+	return total_no_of_doc
 
 
 def query_parsed_into_dict():
@@ -75,14 +77,16 @@ simple_vector_space_model_bit_reprensentation()
 
 
 def calculating_the_no_of_documents_containg_the_word():
-	for k in query_dic:
+	#for k in query_dic:
+	print "ho"
 
 
 
 
 
 def caluclate_idf():
-	idf=log()
+	#idf=log()
+	print "hey"
 
 
 
@@ -117,7 +121,7 @@ def method_to_reduce_the_weight_of_common_occurance_of_terms_in_global_tables():
 
 
 
-def reading_file_from_bag_of_rep(int i):
+def reading_file_from_bag_of_rep(int):
 	a=str(i)
 	if len(a)==1:
 		#x=raw_input("file to read from")
@@ -134,7 +138,7 @@ def reading_file_from_bag_of_rep(int i):
 	return fin_doc
 
 
-def sorting_the_dict(dict dic):
+def sorting_the_dict(*a,**ka):
 	temp=list()
 	temp=[(v, k) for k, v in dic.items()]
 	temp.sort()
