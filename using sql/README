@@ -1,0 +1,27 @@
+Prequisites:-
+
+1.A linux system
+2.MySQL
+3.Python 2.7.10 or above
+4.nltk library in python
+5.punkt module in nltk
+
+
+Steps to Run:-
+
+1.Run script deploy.sh
+
+	sh deploy.sh
+
+  This basically creates a new user in MySQL and creates a database in MySQL
+
+2.You should keep the corpus in a different directory
+
+3.Run python main.py in terminal 
+
+  If you are running for the first time.You will have to initialise the database.
+  For that you need to know the complete path of the directory where the corpus is stored.
+  
+Note:-
+1.When running the program you will be prompted if you want to initialise the database
+2.The creation of the database is logged in the log file 'LOG_IR_A1.log'
