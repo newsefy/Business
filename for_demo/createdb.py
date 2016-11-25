@@ -3,7 +3,7 @@ import sys
 import os
 
 class database:
-    def __init__(self,usID='sagar', pswd='toor@123', dbase='IR_assign', hst='localhost'):
+    def __init__(self,usID='f2014017', pswd='pass', dbase='IR_assign_14017_14030', hst='localhost'):
         self.userID = usID
         self.password = pswd
         self.database = dbase
@@ -76,11 +76,22 @@ class database:
 			cursor.close()   
 
     def set_no_of_doc(self,N):
-    	self.N=N
+    	fil=open("config_doc.txt","w")
+        fil.write(str(N))
+        fil.close()
     
     def get_no_of_doc(self):
-    	return self.N 
+    	fil=open("config_doc.txt","r")
+        N=fil.read()
+        fil.close()
+        return int(N) 
     def set_total_words(self,N):
-    	self.total_words=N
+    	fil=open("config_word.txt","w")
+        fil.write(str(N))
+        fil.close()
+        
     def get_total_words(self):
-    	return self.total_words  
+    	fil=open("config_word.txt","r")
+        total_words=fil.read()
+        fil.close()
+        return int(total_words)  

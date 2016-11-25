@@ -7,7 +7,7 @@ import sys
 
 #corpus=raw_input("Enter the directory of corpus (full path):");
 
-corpus="/home/stark/git/Different-news-articles-classified/News/Corpus"
+corpus="/home/stark/git/Different-news-articles-classified/for_demo/Corpus"
 cwd=os.getcwd()
 db=createdb.database()
 doc_list=BOW(db,corpus,cwd)
