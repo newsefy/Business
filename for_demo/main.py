@@ -10,7 +10,7 @@ import sys
 corpus="/home/stark/git/Different-news-articles-classified/for_demo/Corpus"
 cwd=os.getcwd()
 db=createdb.database()
-doc_list=BOW(db,corpus,cwd)
+#doc_list=BOW(db,corpus,cwd)
 N=db.get_no_of_doc()
 Total_words=db.get_total_words()
 print "Number of documents in corpus:"+str(N)
