@@ -1,0 +1,6 @@
+TODO:-
+1.Add functionality to handle punctuation '.' and '' at line 34 bow.py and line 77 query.py
+
+3.Check logic of IDF/TF etc including queries.Basically check everything :P
+
+4.Any miscelleanous structural changes ex-changing fucntion,adding func,classes etc
